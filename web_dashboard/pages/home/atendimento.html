@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Orders of the Day - Refrigeration Tech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#d5e3fc",
+                        "on-secondary-container": "#57657a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#515f74",
+                        "surface-variant": "#d5e3fd",
+                        "outline-variant": "#c2c6d4",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#c8daff",
+                        "surface-container-highest": "#d5e3fd",
+                        "secondary-fixed": "#d5e3fc",
+                        "inverse-surface": "#233144",
+                        "on-tertiary-fixed": "#00201d",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#00468c",
+                        "surface": "#f8f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-primary-fixed": "#001b3d",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#89f5e7",
+                        "surface-dim": "#ccdbf4",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "primary-container": "#005eb8",
+                        "on-tertiary-fixed-variant": "#005049",
+                        "surface-container": "#e6eeff",
+                        "outline": "#727783",
+                        "tertiary-container": "#006b62",
+                        "tertiary": "#00514a",
+                        "surface-container-high": "#dde9ff",
+                        "tertiary-fixed-dim": "#6bd8cb",
+                        "inverse-on-surface": "#ebf1ff",
+                        "primary": "#00478d",
+                        "surface-tint": "#005db6",
+                        "on-background": "#0d1c2f",
+                        "inverse-primary": "#a9c7ff",
+                        "on-surface": "#0d1c2f",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-surface-variant": "#424752",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "primary-fixed": "#d6e3ff",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-container": "#7fecde"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm flex items-center justify-between px-4 h-16">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-blue-50 transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[#005EB8]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-inter font-bold text-xl tracking-tight text-[#0d1c2f]">Orders of the Day</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-blue-50 transition-colors">
+<span class="material-symbols-outlined text-[#424752]" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="max-w-3xl mx-auto px-4 pb-32">
+<!-- Tabs -->
+<div class="mt-6 flex bg-surface-container-low p-1 rounded-xl">
+<button class="flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all duration-200 bg-white shadow-sm text-[#005EB8]">
+                Pending
+            </button>
+<button class="flex-1 py-3 px-4 rounded-lg font-medium text-sm transition-all duration-200 text-on-surface-variant hover:text-[#005EB8]">
+                Completed
+            </button>
+</div>
+<!-- Date Header -->
+<div class="mt-8 mb-4">
+<h2 class="text-on-surface-variant font-semibold text-sm uppercase tracking-widest">Today, Oct 24</h2>
+</div>
+<!-- Service Orders List -->
+<div class="space-y-4">
+<!-- Card 1: Emergency -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border-l-4 border-error hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-error-container text-on-error-container text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">Priority</span>
+<span class="text-on-surface-variant text-xs font-medium">SO-48291</span>
+</div>
+<h3 class="text-lg font-bold leading-tight">BioLab Cryo Systems</h3>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">
+                        Pending
+                    </div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container" data-icon="ac_unit">ac_unit</span>
+<span class="text-sm font-medium text-on-surface">Emergency Leak Repair</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="schedule">schedule</span>
+<span class="text-sm">08:30 AM - 10:30 AM</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="location_on">location_on</span>
+<span class="text-sm">4521 Innovation Way, Suite 200</span>
+</div>
+</div>
+<div class="mt-5 pt-4 border-t border-surface-container flex gap-3">
+<button class="flex-1 bg-gradient-to-br from-primary to-primary-container text-white font-bold py-2.5 rounded-lg text-sm active:scale-[0.98] transition-transform">
+                        Start Service
+                    </button>
+<button class="w-12 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-primary active:bg-blue-50 transition-colors">
+<span class="material-symbols-outlined" data-icon="directions">directions</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Maintenance -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border-l-4 border-primary-container hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-on-surface-variant text-xs font-medium">SO-48305</span>
+</div>
+<h3 class="text-lg font-bold leading-tight">FreshMart Logistics</h3>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">
+                        Pending
+                    </div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container" data-icon="settings_suggest">settings_suggest</span>
+<span class="text-sm font-medium text-on-surface">Compressor Installation</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="schedule">schedule</span>
+<span class="text-sm">01:00 PM - 04:00 PM</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="location_on">location_on</span>
+<span class="text-sm">882 Cold Storage Blvd</span>
+</div>
+</div>
+<div class="mt-5 pt-4 border-t border-surface-container flex gap-3">
+<button class="flex-1 border border-primary text-primary font-bold py-2.5 rounded-lg text-sm hover:bg-blue-50 active:scale-[0.98] transition-transform">
+                        View Details
+                    </button>
+<button class="w-12 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-primary active:bg-blue-50 transition-colors">
+<span class="material-symbols-outlined" data-icon="directions">directions</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Routine Check -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border-l-4 border-outline-variant hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-on-surface-variant text-xs font-medium">SO-48312</span>
+</div>
+<h3 class="text-lg font-bold leading-tight">Arctic Delights Ice Cream</h3>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">
+                        Pending
+                    </div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container" data-icon="build">build</span>
+<span class="text-sm font-medium text-on-surface">Quarterly Maintenance Check</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="schedule">schedule</span>
+<span class="text-sm">04:30 PM - 05:30 PM</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="location_on">location_on</span>
+<span class="text-sm">12 Frosty Lane</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Diagnostic Pulse Placeholder -->
+<div class="mt-12 p-6 rounded-2xl bg-primary-fixed/30 border border-primary-fixed-dim">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-bold text-primary italic">Arctic Flow Diagnostic</span>
+<span class="text-xs font-medium text-on-primary-fixed-variant">System Syncing...</span>
+</div>
+<div class="w-full bg-primary-fixed h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-2/3 rounded-full relative">
+<div class="absolute inset-0 bg-white/30 animate-pulse"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-2 pb-6 pt-3 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(13,28,47,0.06)] z-50 rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-5 py-2 hover:text-[#005EB8] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#dde9ff] dark:bg-blue-900/40 text-[#00478d] dark:text-blue-100 rounded-2xl px-5 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="assignment" style="font-variation-settings: 'FILL' 1;">assignment</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-5 py-2 hover:text-[#005EB8] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="inventory_2">inventory_2</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#424752] dark:text-slate-400 px-5 py-2 hover:text-[#005EB8] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+<!-- FAB (Contextual for Task creation) -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-white rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "background": "#f8f9ff",
+              "on-primary-container": "#c8daff",
+              "on-background": "#0d1c2f",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#eff4ff",
+              "inverse-surface": "#233144",
+              "on-tertiary-fixed-variant": "#005049",
+              "on-secondary-fixed": "#0d1c2e",
+              "surface-bright": "#f8f9ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#3a485b",
+              "on-error-container": "#93000a",
+              "surface-tint": "#005db6",
+              "surface": "#f8f9ff",
+              "surface-variant": "#d5e3fd",
+              "tertiary-fixed": "#89f5e7",
+              "outline": "#727783",
+              "surface-container-high": "#dde9ff",
+              "tertiary-fixed-dim": "#6bd8cb",
+              "secondary-fixed-dim": "#b9c7df",
+              "primary": "#00478d",
+              "on-tertiary-fixed": "#00201d",
+              "on-surface-variant": "#424752",
+              "on-primary-fixed-variant": "#00468c",
+              "secondary-fixed": "#d5e3fc",
+              "surface-container-highest": "#d5e3fd",
+              "secondary-container": "#d5e3fc",
+              "error-container": "#ffdad6",
+              "primary-fixed": "#d6e3ff",
+              "inverse-on-surface": "#ebf1ff",
+              "on-tertiary-container": "#7fecde",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "secondary": "#515f74",
+              "inverse-primary": "#a9c7ff",
+              "surface-dim": "#ccdbf4",
+              "primary-container": "#005eb8",
+              "tertiary": "#00514a",
+              "outline-variant": "#c2c6d4",
+              "on-error": "#ffffff",
+              "on-surface": "#0d1c2f",
+              "tertiary-container": "#006b62",
+              "on-secondary-container": "#57657a",
+              "surface-container": "#e6eeff",
+              "primary-fixed-dim": "#a9c7ff",
+              "on-primary-fixed": "#001b3d"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-thermal-gradient {
+            background: linear-gradient(135deg, #00478d 0%, #005eb8 100%);
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm shadow-blue-900/5">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-blue-50 transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-slate-900">menu</span>
+</button>
+<h1 class="font-inter headline-md font-bold text-slate-900">Customers</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden border border-primary/10">
+<img class="w-full h-full object-cover" data-alt="Technician Profile Portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb3OBMrfL9OxkWu2t3lN-TJRD7bN97uXafnB6sRuGXeF4V0qCDPPT-U3rKJ2Wfq8pCF4hSPpqMzDD16tKsHOWmYUZA5dyBggb99z2iru1wLndKyzia6BdECjwOMuZpk1c2ZnQUh8fEWO2J7JU2wcAi7hWCxS_5cm3-LNy9piuFvpXNQUOcOwyfANkEqsMAODU8BJnQnuy-dyJWoQMOHP-wNOtIZhyvK82c9h3Hegab77DZhavceqQ_KTfcjIa1_e7RrX3tVEnSIUQ"/>
+</div>
+</div>
+</header>
+<main class="pt-20 px-4 max-w-5xl mx-auto space-y-6">
+<!-- Search Bar -->
+<div class="relative group mt-4">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</div>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-12 pr-4 text-on-surface placeholder:text-on-surface-variant focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all shadow-sm" placeholder="Search service locations..." type="text"/>
+</div>
+<!-- Section Label -->
+<div class="flex items-center justify-between px-2">
+<span class="font-label label-md font-medium text-on-surface-variant">Active Service Contracts</span>
+<button class="text-primary font-medium label-md flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filter
+            </button>
+</div>
+<!-- Customer Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Customer Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow group border border-transparent hover:border-primary/5">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">ac_unit</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">Cold Storage Ltda</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Industrial Sector, Dist. 4
+                            </p>
+</div>
+</div>
+<span class="bg-tertiary-container text-on-tertiary-fixed text-[10px] px-3 py-1 rounded-full font-bold tracking-wider">PREMIUM</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 mb-4 space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Active Systems</span>
+<span class="font-bold text-on-surface">12 Chillers</span>
+</div>
+<div class="w-full h-1 bg-primary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4"></div>
+</div>
+</div>
+<button class="w-full bg-thermal-gradient text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+                    View Dashboard <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Customer Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow group border border-transparent hover:border-primary/5">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">Supermercado Central</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Main Ave, No. 450
+                            </p>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] px-3 py-1 rounded-full font-bold tracking-wider">STANDARD</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 mb-4 space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Active Systems</span>
+<span class="font-bold text-on-surface">4 Walk-ins</span>
+</div>
+<div class="w-full h-1 bg-primary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/4"></div>
+</div>
+</div>
+<button class="w-full bg-surface-container-high text-primary py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed active:scale-[0.98] transition-all">
+                    View Details
+                </button>
+</div>
+<!-- Customer Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow group border border-transparent hover:border-primary/5">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">Gourmet Plaza</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Park Side, Suite 22
+                            </p>
+</div>
+</div>
+<span class="bg-error-container text-on-error-container text-[10px] px-3 py-1 rounded-full font-bold tracking-wider">ALERT</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 mb-4 space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Active Systems</span>
+<span class="font-bold text-on-surface">6 Freezers</span>
+</div>
+<div class="w-full h-1 bg-error-container rounded-full overflow-hidden">
+<div class="h-full bg-error w-full"></div>
+</div>
+</div>
+<button class="w-full bg-surface-container-high text-primary py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed active:scale-[0.98] transition-all">
+                    View Details
+                </button>
+</div>
+<!-- Customer Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow group border border-transparent hover:border-primary/5">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">BioLab Solutions</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Science Park, Lab 9
+                            </p>
+</div>
+</div>
+<span class="bg-tertiary-container text-on-tertiary-fixed text-[10px] px-3 py-1 rounded-full font-bold tracking-wider">PREMIUM</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 mb-4 space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Active Systems</span>
+<span class="font-bold text-on-surface">2 Ultra-Low Temp</span>
+</div>
+<div class="w-full h-1 bg-primary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2"></div>
+</div>
+</div>
+<button class="w-full bg-surface-container-high text-primary py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed active:scale-[0.98] transition-all">
+                    View Details
+                </button>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-thermal-gradient text-white rounded-2xl flex items-center justify-center shadow-lg shadow-primary/30 z-40 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0; font-size: 32px;">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl z-50 rounded-t-2xl shadow-[0_-4px_12px_rgba(13,28,47,0.06)] border-t border-blue-100/20">
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-blue-600 transition-colors px-5 py-1.5 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-inter label-md font-medium mt-1">Jobs</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-100 rounded-2xl px-5 py-1.5 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-inter label-md font-medium mt-1">Customers</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-blue-600 transition-colors px-5 py-1.5 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">ac_unit</span>
+<span class="font-inter label-md font-medium mt-1">Equipment</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-blue-600 transition-colors px-5 py-1.5 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-inter label-md font-medium mt-1">Settings</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Security Settings | Arctic Flow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#0d1c2e",
+                        "tertiary": "#00514a",
+                        "on-secondary-container": "#57657a",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#a9c7ff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#dde9ff",
+                        "on-primary-fixed-variant": "#00468c",
+                        "on-tertiary-fixed": "#00201d",
+                        "surface-dim": "#ccdbf4",
+                        "secondary": "#515f74",
+                        "on-primary-container": "#c8daff",
+                        "inverse-surface": "#233144",
+                        "surface-tint": "#005db6",
+                        "outline-variant": "#c2c6d4",
+                        "secondary-fixed": "#d5e3fc",
+                        "surface-container-low": "#eff4ff",
+                        "surface": "#f8f9ff",
+                        "tertiary-container": "#006b62",
+                        "inverse-on-surface": "#ebf1ff",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-error-container": "#93000a",
+                        "on-background": "#0d1c2f",
+                        "secondary-container": "#d5e3fc",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "background": "#f8f9ff",
+                        "tertiary-fixed": "#89f5e7",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005049",
+                        "surface-variant": "#d5e3fd",
+                        "on-tertiary-container": "#7fecde",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "primary-fixed": "#d6e3ff",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "primary-container": "#005eb8",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#727783",
+                        "on-surface-variant": "#424752",
+                        "tertiary-fixed-dim": "#6bd8cb",
+                        "on-surface": "#0d1c2f",
+                        "surface-container": "#e6eeff",
+                        "surface-container-highest": "#d5e3fd",
+                        "primary": "#00478d",
+                        "on-primary-fixed": "#001b3d"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+        }
+        .thermal-gradient {
+            background: linear-gradient(135deg, #00478d 0%, #005eb8 100%);
+        }
+        .ghost-border {
+            border: 1px solid rgba(194, 198, 212, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f8f9ff]/80 backdrop-blur-xl shadow-sm shadow-[#0d1c2f]/5 flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-[#dde9ff]/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#00478d]">arrow_back</span>
+</button>
+<h1 class="font-headline text-xl font-bold text-[#0d1c2f]">Security Settings</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-[#dde9ff]/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#00478d]">shield</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-4 md:px-8 max-w-4xl mx-auto space-y-8">
+<!-- Change Password Section -->
+<section class="space-y-4">
+<h2 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant px-2">Authentication</h2>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm shadow-on-surface/5 space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">lock</span>
+<h3 class="text-lg font-bold">Update Password</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-on-surface-variant ml-1">Current Password</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 ghost-border text-on-surface" placeholder="••••••••" type="password"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-on-surface-variant ml-1">New Password</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 ghost-border text-on-surface" placeholder="••••••••" type="password"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-on-surface-variant ml-1">Confirm New Password</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 ghost-border text-on-surface" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Access Control Bento -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Biometric Toggle -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm shadow-on-surface/5 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">fingerprint</span>
+<h3 class="font-bold">Biometric Login</h3>
+</div>
+<p class="text-sm text-on-surface-variant">Use FaceID or Fingerprint for quick access to jobs.</p>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+</div>
+<!-- 2FA Status -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm shadow-on-surface/5 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">verified_user</span>
+<h3 class="font-bold">Two-Factor Auth</h3>
+</div>
+<p class="text-sm text-on-surface-variant">Add an extra layer of protection to your profile.</p>
+</div>
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-fixed text-[10px] font-bold rounded-full uppercase tracking-wider">Active</span>
+</div>
+<button class="mt-4 text-sm font-semibold text-primary text-left hover:underline">Manage methods</button>
+</div>
+</section>
+<!-- Active Sessions -->
+<section class="space-y-4">
+<div class="flex items-center justify-between px-2">
+<h2 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Active Sessions</h2>
+<span class="text-xs font-medium text-on-surface-variant">3 Devices logged in</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm shadow-on-surface/5 overflow-hidden">
+<div class="divide-y divide-surface-container-low">
+<!-- Device 1 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">smartphone</span>
+</div>
+<div>
+<p class="font-bold text-sm">iPhone 15 Pro — Mobile App</p>
+<p class="text-xs text-on-surface-variant">Current Session • New York, USA</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Device 2 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">laptop</span>
+</div>
+<div>
+<p class="font-bold text-sm">MacBook Pro — Chrome</p>
+<p class="text-xs text-on-surface-variant">Active 2h ago • New Jersey, USA</p>
+</div>
+</div>
+<button class="text-xs font-bold text-error hover:bg-error-container/50 px-3 py-1.5 rounded-lg transition-colors">Revoke</button>
+</div>
+<!-- Device 3 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">tablet</span>
+</div>
+<div>
+<p class="font-bold text-sm">iPad Air — Mobile App</p>
+<p class="text-xs text-on-surface-variant">Active 3 days ago • Boston, USA</p>
+</div>
+</div>
+<button class="text-xs font-bold text-error hover:bg-error-container/50 px-3 py-1.5 rounded-lg transition-colors">Revoke</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<footer class="pt-8 pb-12 flex flex-col items-center gap-6">
+<button class="w-full md:w-auto md:min-w-[280px] py-4 rounded-xl thermal-gradient text-white font-bold text-base shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                Save Security Settings
+            </button>
+<button class="text-sm font-bold text-error hover:text-on-error-container transition-colors">
+                Log Out from All Devices
+            </button>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#f8f9ff]/80 backdrop-blur-xl z-50 rounded-t-2xl shadow-[0_-4px_24px_rgba(13,28,47,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#424752] px-5 py-2 hover:text-[#005eb8] transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">build</span>
+<span class="font-['Inter'] text-[10px] font-medium mt-1">Jobs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#424752] px-5 py-2 hover:text-[#005eb8] transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">ac_unit</span>
+<span class="font-['Inter'] text-[10px] font-medium mt-1">Equipment</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#424752] px-5 py-2 hover:text-[#005eb8] transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-['Inter'] text-[10px] font-medium mt-1">Safety</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#dde9ff] text-[#00478d] rounded-2xl px-5 py-2 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[10px] font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

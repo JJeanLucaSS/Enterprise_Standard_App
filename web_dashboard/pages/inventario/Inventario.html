@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#6bd8cb",
+              "surface-container": "#e6eeff",
+              "secondary-container": "#d5e3fc",
+              "secondary-fixed-dim": "#b9c7df",
+              "tertiary-fixed": "#89f5e7",
+              "primary-fixed": "#d6e3ff",
+              "on-surface-variant": "#424752",
+              "inverse-surface": "#233144",
+              "tertiary-container": "#006b62",
+              "on-error": "#ffffff",
+              "inverse-primary": "#a9c7ff",
+              "surface-dim": "#ccdbf4",
+              "surface-bright": "#f8f9ff",
+              "on-primary-fixed": "#001b3d",
+              "outline-variant": "#c2c6d4",
+              "primary-container": "#005eb8",
+              "on-secondary-fixed": "#0d1c2e",
+              "on-primary": "#ffffff",
+              "surface-variant": "#d5e3fd",
+              "background": "#f8f9ff",
+              "on-secondary-fixed-variant": "#3a485b",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed-variant": "#005049",
+              "error-container": "#ffdad6",
+              "surface-tint": "#005db6",
+              "outline": "#727783",
+              "on-primary-fixed-variant": "#00468c",
+              "surface-container-low": "#eff4ff",
+              "on-background": "#0d1c2f",
+              "on-tertiary-container": "#7fecde",
+              "inverse-on-surface": "#ebf1ff",
+              "error": "#ba1a1a",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#a9c7ff",
+              "on-tertiary-fixed": "#00201d",
+              "on-primary-container": "#c8daff",
+              "surface-container-high": "#dde9ff",
+              "surface": "#f8f9ff",
+              "secondary-fixed": "#d5e3fc",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#d5e3fd",
+              "secondary": "#515f74",
+              "primary": "#00478d",
+              "on-error-container": "#93000a",
+              "tertiary": "#00514a",
+              "on-surface": "#0d1c2f",
+              "on-secondary-container": "#57657a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar Section -->
+<header class="sticky top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm shadow-blue-900/5 flex items-center justify-between px-6 h-16">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="inventory_2">inventory_2</span>
+<h1 class="font-['Inter'] headline-md font-bold text-slate-900 dark:text-slate-50">Inventário</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-blue-50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-500" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="pb-32">
+<!-- Search & Quick Stats -->
+<section class="px-6 pt-6 space-y-4">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+<input class="w-full h-12 pl-12 pr-4 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 placeholder:text-outline transition-all" placeholder="Buscar por nome ou SKU..." type="text"/>
+</div>
+<!-- Categories Horizontal Scroll -->
+<div class="flex overflow-x-auto gap-2 py-2 hide-scrollbar">
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary text-sm font-medium whitespace-nowrap active:scale-95 transition-transform">Todos</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium whitespace-nowrap hover:bg-surface-variant active:scale-95 transition-transform">Compressores</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium whitespace-nowrap hover:bg-surface-variant active:scale-95 transition-transform">Fluidos</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium whitespace-nowrap hover:bg-surface-variant active:scale-95 transition-transform">Ferramentas</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium whitespace-nowrap hover:bg-surface-variant active:scale-95 transition-transform">Elétrica</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium whitespace-nowrap hover:bg-surface-variant active:scale-95 transition-transform">Válvulas</button>
+</div>
+</section>
+<!-- Inventory List (Bento-ish Grid) -->
+<section class="px-6 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Item Card 1: Low Stock Warning -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+<div class="relative h-40 w-full bg-surface-container-low rounded-lg overflow-hidden">
+<img alt="Compressor" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="High quality industrial refrigeration compressor unit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdyWgB1dsGOoL_XO-6WCRXTXzQhpWvmaiRYIREAGN0evUlIDcLPSHrdE-g4SySNnxgfYoLWdg72IfsRLHkZZkLeSU5MeJ9ipz0EX005rbCHG7K_uLLpAf0sPcwnIeXmP3d5Wo2cP_2sZfNYnsvXmWYvSYm1cpxNE3_zctdVNALHfW96uLg997hKy9j-Q10K_5hUUTQilRFfXnq4LcPjsEe_58Zl045KF__j2OPdm3wDy4kBUWOdNNzSl08msidW0JOTLeDGcHZ2Yk"/>
+<span class="absolute top-2 right-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-wider uppercase">Crítico</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="text-on-surface font-bold text-lg leading-tight">Compressor Tecumseh 1/4</h3>
+<span class="bg-error-container text-on-error-container text-[10px] px-2 py-0.5 rounded-full font-bold">ESTOQUE BAIXO</span>
+</div>
+<p class="text-on-surface-variant text-xs font-mono">SKU: TEC-234-AX</p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container-low">
+<div class="flex flex-col">
+<span class="text-[10px] text-outline uppercase font-bold tracking-widest">Quantidade</span>
+<span class="text-xl font-extrabold text-error">2 Un</span>
+</div>
+<button class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+<div class="relative h-40 w-full bg-surface-container-low rounded-lg overflow-hidden">
+<img alt="Gás R134a" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="Blue pressurized gas cylinder for refrigeration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF0c25bnyIwGxZW3hrpWswafFHe6ErMDoYCHUqEkexeY-pTm7mV7GmBhJS7uwmpBN6898w4v5aRv9Cpctz09O_V3c2KpMKJJX44T4looZTSe5gQXROLnIXNkhmud8dOxP-uqnnMCAzIkWzgbbcpDPkj7fl1twu2VFjtVQTSMgNblAao7DsQubwx7r5AXQh3Zz1hVxJDo-vFTd6MJdo4AspqJDVt66gHzyMcwOD4JESzisMKbFORV7GFjiR2OdyPBPdTBpKE2cJ_FY"/>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="text-on-surface font-bold text-lg leading-tight">Gás Refrigerante R134a</h3>
+</div>
+<p class="text-on-surface-variant text-xs font-mono">SKU: GAS-R134-13</p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container-low">
+<div class="flex flex-col">
+<span class="text-[10px] text-outline uppercase font-bold tracking-widest">Disponível</span>
+<span class="text-xl font-extrabold text-primary">12.5 Kg</span>
+</div>
+<button class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Item Card 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+<div class="relative h-40 w-full bg-surface-container-low rounded-lg overflow-hidden">
+<img alt="Filtro Secador" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="Copper refrigeration filter drier component" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHIXffE8YMeLLdTGgSRY2XyArwEQN7m7-zKqIl-f8KKPyChxeej8xFC4j9PtmAM8GgNYM_vCIfFy8Wx4D4lEFFRD1liiQ5VGMSJNGrYmD-9n1bQ3KKkBIjm__lQ8nt5cWeYV1yXe7WllfSh8mKS1q-6kfr9Ce_M7WPfzMd-Jf8oBf5Akp36sooN8FNWCULfLsHxg1aWmH4lOiqN6nufTo7uiSxmKzhgZazKWWBYC3wZPa78PepdHyrkpYZP4hamFPgIGTNVso5kdM"/>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="text-on-surface font-bold text-lg leading-tight">Filtro Secador 3/8</h3>
+</div>
+<p class="text-on-surface-variant text-xs font-mono">SKU: FLT-SEC-038</p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container-low">
+<div class="flex flex-col">
+<span class="text-[10px] text-outline uppercase font-bold tracking-widest">Estoque</span>
+<span class="text-xl font-extrabold text-on-surface">45 Un</span>
+</div>
+<button class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Item Card 4: Low Stock -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+<div class="relative h-40 w-full bg-surface-container-low rounded-lg overflow-hidden">
+<img alt="Capacitor" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="Cylindrical electrical capacitor for motors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNDbtfPGoVjC1dYjGl1T-huEXa2D7VftaLIorWJPoLwvJ0VIC1_6rf-y6XLk6QOsesNk3g4VATiN0Bep3oOn6woxftz0LUT0Zvx_iAaafKkmw4fSE1hRXCa4EAK9y1GdBf_SIDzXHOYXbUYd7fr1SJ1uXeimWStWyexe80AI5SNvWC4-PlPqzUMimG-ajHIk9ViwvKhwU1WP8moSOf-L15iCIjGOzS7oTCwfTIb2eFruLlU5ptDBWiehrOMM6mkOsc5d2nU4ir80w"/>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h3 class="text-on-surface font-bold text-lg leading-tight">Capacitor de Partida 35uF</h3>
+<span class="bg-error-container text-on-error-container text-[10px] px-2 py-0.5 rounded-full font-bold">ESTOQUE BAIXO</span>
+</div>
+<p class="text-on-surface-variant text-xs font-mono">SKU: CAP-35UF-EL</p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container-low">
+<div class="flex flex-col">
+<span class="text-[10px] text-outline uppercase font-bold tracking-widest">Quantidade</span>
+<span class="text-xl font-extrabold text-error">5 Un</span>
+</div>
+<button class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button - Request Restock -->
+<button class="fixed bottom-24 right-6 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 h-14 rounded-2xl shadow-lg shadow-primary/30 flex items-center gap-3 z-50 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span class="font-bold text-sm tracking-wide">Solicitar Reposição</span>
+</button>
+<!-- BottomNavBar Section -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-blue-100/20 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:text-blue-600 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] label-md font-medium">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:text-blue-600 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-['Inter'] label-md font-medium">Tarefas</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-100 rounded-2xl px-5 py-1.5 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-['Inter'] label-md font-medium">Inventário</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 hover:text-blue-600 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] label-md font-medium">Perfil</span>
+</a>
+</nav>
+</body></html>

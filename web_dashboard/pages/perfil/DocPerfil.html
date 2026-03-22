@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Documentos e Certificados</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#89f5e7",
+              "surface-container-high": "#dde9ff",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "tertiary-container": "#006b62",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#d5e3fd",
+              "on-surface": "#0d1c2f",
+              "surface-container-low": "#eff4ff",
+              "primary-fixed-dim": "#a9c7ff",
+              "on-primary-fixed-variant": "#00468c",
+              "inverse-surface": "#233144",
+              "on-primary-fixed": "#001b3d",
+              "surface-tint": "#005db6",
+              "surface-bright": "#f8f9ff",
+              "on-primary-container": "#c8daff",
+              "surface-variant": "#d5e3fd",
+              "on-background": "#0d1c2f",
+              "tertiary": "#00514a",
+              "on-secondary-fixed-variant": "#3a485b",
+              "secondary-fixed-dim": "#b9c7df",
+              "on-surface-variant": "#424752",
+              "primary": "#00478d",
+              "secondary-container": "#d5e3fc",
+              "secondary": "#515f74",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#d5e3fc",
+              "tertiary-fixed-dim": "#6bd8cb",
+              "outline-variant": "#c2c6d4",
+              "on-tertiary-fixed-variant": "#005049",
+              "on-secondary-container": "#57657a",
+              "on-secondary-fixed": "#0d1c2e",
+              "surface-container-lowest": "#ffffff",
+              "surface-dim": "#ccdbf4",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#a9c7ff",
+              "primary-container": "#005eb8",
+              "on-error-container": "#93000a",
+              "outline": "#727783",
+              "on-tertiary-container": "#7fecde",
+              "surface-container": "#e6eeff",
+              "background": "#f8f9ff",
+              "inverse-on-surface": "#ebf1ff",
+              "surface": "#f8f9ff",
+              "primary-fixed": "#d6e3ff",
+              "on-tertiary-fixed": "#00201d"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.25rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-bg {
+            background-color: #eff4ff;
+        }
+        body {
+            background-color: #f8f9ff;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm shadow-blue-900/5 flex items-center justify-between px-4 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-blue-50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-blue-700" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline text-xl font-bold text-slate-900">Documentos e Certificados</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-blue-50 transition-colors">
+<span class="material-symbols-outlined text-slate-500" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-3xl mx-auto">
+<!-- Summary Section (Asymmetric Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
+<div class="md:col-span-2 bg-gradient-to-br from-primary to-primary-container p-6 rounded-xl text-on-primary flex flex-col justify-between min-h-[160px] shadow-lg shadow-primary/10">
+<div>
+<span class="text-on-primary-container text-xs font-bold tracking-widest uppercase">Status do Perfil</span>
+<h2 class="text-2xl font-bold mt-1">Técnico Certificado</h2>
+</div>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-sm font-medium">8 Certificações Ativas</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl flex flex-col items-center justify-center text-center shadow-sm">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/10 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="update">update</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">Próxima Renovação</span>
+<span class="text-sm font-bold text-on-surface mt-1">15 Out 2024</span>
+</div>
+</section>
+<!-- Document List -->
+<div class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-sm font-bold text-on-surface-variant tracking-wide uppercase">Meus Certificados</h3>
+<span class="text-xs font-medium text-primary">Ver todos</span>
+</div>
+<!-- HVAC Level 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between shadow-sm group hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="ac_unit">ac_unit</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">HVAC Level 3 Certification</h4>
+<p class="text-sm text-on-surface-variant">Emitido em 12 Jan 2023</p>
+</div>
+</div>
+<button class="px-4 py-2 text-sm font-bold text-primary hover:bg-primary/5 rounded-lg transition-colors active:scale-95">
+                    Edit/View
+                </button>
+</div>
+<!-- Safety Training -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between shadow-sm group hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-tertiary-container/5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="safety_check">safety_check</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Safety Training - Work at Heights</h4>
+<p class="text-sm text-on-surface-variant">Emitido em 05 Mar 2023</p>
+</div>
+</div>
+<button class="px-4 py-2 text-sm font-bold text-primary hover:bg-primary/5 rounded-lg transition-colors active:scale-95">
+                    Edit/View
+                </button>
+</div>
+<!-- Electrical Safety -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between shadow-sm group hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="bolt">bolt</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Electrical Safety Certificate</h4>
+<p class="text-sm text-on-surface-variant">Emitido em 22 Nov 2022</p>
+</div>
+</div>
+<button class="px-4 py-2 text-sm font-bold text-primary hover:bg-primary/5 rounded-lg transition-colors active:scale-95">
+                    Edit/View
+                </button>
+</div>
+<!-- Refrigerant Handling -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex items-center justify-between shadow-sm group hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-fixed-dim/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="propane_tank" style="font-variation-settings: 'FILL' 1;">propane_tank</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Refrigerant Handling License</h4>
+<p class="text-sm text-on-surface-variant">Emitido em 30 Jun 2022</p>
+</div>
+</div>
+<button class="px-4 py-2 text-sm font-bold text-primary hover:bg-primary/5 rounded-lg transition-colors active:scale-95">
+                    Edit/View
+                </button>
+</div>
+</div>
+<!-- Upload CTA -->
+<div class="mt-8">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="cloud_upload">cloud_upload</span>
+                Upload New Certificate
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 backdrop-blur-xl rounded-t-2xl z-50 shadow-[0_-4px_12px_rgba(13,28,47,0.06)]">
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-1.5 hover:text-blue-600 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Jobs</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-1.5 hover:text-blue-600 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="ac_unit">ac_unit</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Equipment</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100 text-blue-800 rounded-2xl px-5 py-1.5 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Profile</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-1.5 hover:text-blue-600 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Settings</span>
+</div>
+</nav>
+<!-- Background Decoration -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none opacity-40">
+<div class="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-surface-container-high rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-primary-fixed rounded-full blur-[120px]"></div>
+</div>
+</body></html>

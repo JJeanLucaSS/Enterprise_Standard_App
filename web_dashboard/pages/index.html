@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thermal Architect - Inovação em Refrigeração</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#57657a",
+              "primary": "#00478d",
+              "surface-container-highest": "#d5e3fd",
+              "on-secondary-fixed-variant": "#3a485b",
+              "on-tertiary-fixed-variant": "#005049",
+              "surface-bright": "#f8f9ff",
+              "on-background": "#0d1c2f",
+              "on-surface-variant": "#424752",
+              "tertiary-container": "#006b62",
+              "on-surface": "#0d1c2f",
+              "surface-variant": "#d5e3fd",
+              "surface-container": "#e6eeff",
+              "primary-fixed": "#d6e3ff",
+              "on-primary-fixed": "#001b3d",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#89f5e7",
+              "surface-dim": "#ccdbf4",
+              "on-tertiary-fixed": "#00201d",
+              "surface-tint": "#005db6",
+              "surface-container-low": "#eff4ff",
+              "outline-variant": "#c2c6d4",
+              "on-secondary-fixed": "#0d1c2e",
+              "inverse-surface": "#233144",
+              "primary-container": "#005eb8",
+              "on-primary-container": "#c8daff",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#a9c7ff",
+              "inverse-primary": "#a9c7ff",
+              "surface": "#f8f9ff",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#ebf1ff",
+              "background": "#f8f9ff",
+              "outline": "#727783",
+              "surface-container-high": "#dde9ff",
+              "secondary-fixed-dim": "#b9c7df",
+              "tertiary-fixed-dim": "#6bd8cb",
+              "secondary-fixed": "#d5e3fc",
+              "secondary": "#515f74",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#7fecde",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#00468c",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary": "#00514a",
+              "secondary-container": "#d5e3fc"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #00478d 0%, #005eb8 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400 text-2xl" data-icon="ac_unit">ac_unit</span>
+<span class="text-xl font-bold tracking-tight text-blue-800 dark:text-blue-300">Thermal Architect</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 dark:text-blue-400 font-semibold transition-colors" href="#">Início</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 px-3 py-1 rounded transition-colors" href="#">Ordens</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 px-3 py-1 rounded transition-colors" href="#">Equipamentos</a>
+</nav> 
+<!--botao entre-->
+<div class="flex items-center gap-4">
+  <a href="login/login.html">
+    <button class="px-5 py-2 text-primary font-medium hover:bg-surface-container transition-colors active:scale-95 duration-200">
+      Entrar
+    </button>
+  </a>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-24 md:pb-0">
+<!-- Hero Section -->
+<section class="relative px-6 py-12 md:py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-wider uppercase mb-6">
+                        Tecnologia de Precisão
+                    </span>
+<h1 class="text-4xl md:text-6xl font-extrabold text-on-surface leading-tight mb-6">
+                        Precisão em <span class="text-primary italic">cada grau</span>.
+                    </h1>
+<p class="text-lg text-on-surface-variant max-w-lg mb-10 leading-relaxed">
+                        Gerencie sistemas térmicos complexos com a autoridade de um arquiteto. Monitoramento em tempo real, ordens de serviço e diagnósticos inteligentes.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="primary-gradient text-white px-8 py-4 rounded-lg font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-95 transition-all">
+                            Começar agora
+                        </button>
+<button class="bg-surface-container-high text-primary px-8 py-4 rounded-lg font-bold hover:bg-surface-container-highest active:scale-95 transition-all">
+                            Saiba mais
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-tertiary-fixed/10 rounded-full blur-3xl"></div>
+<div class="relative rounded-xl overflow-hidden shadow-2xl bg-surface-container-lowest border border-outline-variant/10">
+<img alt="Tecnologia de Refrigeração" class="w-full h-[400px] object-cover" data-alt="Engenheiro analisando sistema térmico digital moderno" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFTeyF6cNeAuo0uBj0RaaskflfOKMeqSlCXCE34G8zePSiiOCKtrypNcTdTjriQX0r9y5wo7XuhxXWyC7MY8Vm1SIAiJywiyD86huc4ICtugR0PBv9Q_VbbCvSqMYh_8ccnbIr1Hf22yce3JbYPJyli_s5ONBpL5CtXpUsXAE8Z75aaBOixfIAcEXTAAK3z7Wd064e9eH2qqCfV1tLUcNL64h69g_Bwf70HbrU_IW8-Id-q6k365ShGBtXaZFtl4SwKG0AGanW62M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent flex items-end p-8">
+<div class="glass-effect bg-white/10 p-4 rounded-lg border border-white/20">
+<p class="text-white text-sm font-medium">Interface de Controle Delta-V</p>
+<div class="flex items-center gap-2 mt-2">
+<div class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></div>
+<span class="text-xs text-white/80">Monitoramento Ativo</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Functionalities (Bento Grid) -->
+<section class="px-6 py-12 md:py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12">
+<h2 class="text-2xl md:text-3xl font-bold text-on-surface">Gestão Estratégica</h2>
+<p class="text-on-surface-variant mt-2">Acesso rápido aos pilares da sua operação térmica.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- OS Card -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between min-h-[280px]">
+<div>
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="assignment">assignment</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Ordens de Serviço</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Organize manutenções preventivas e corretivas com fluxos de trabalho otimizados.
+                            </p>
+</div>
+<div class="mt-8 flex items-center text-primary font-bold text-sm">
+                            Acessar Painel <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Equipment Card -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between min-h-[280px]">
+<div>
+<div class="w-12 h-12 rounded-lg bg-tertiary-container/10 flex items-center justify-center text-tertiary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="severe_cold">severe_cold</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Equipamentos</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Inventário completo de compressores, evaporadores e condensadores com histórico técnico.
+                            </p>
+</div>
+<div class="mt-8 flex items-center text-primary font-bold text-sm">
+                            Ver Inventário <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Profile Card -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between min-h-[280px]">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="person">person</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Meu Perfil</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Gerencie suas credenciais, certificações e acompanhe sua produtividade mensal.
+                            </p>
+</div>
+<div class="mt-8 flex items-center text-primary font-bold text-sm">
+                            Configurações <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats/Diagnostic Pulse Section -->
+<section class="px-6 py-16">
+<div class="max-w-7xl mx-auto glass-effect bg-primary/5 rounded-2xl p-8 md:p-12 border border-primary/10">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="text-center md:text-left">
+<h4 class="text-primary font-bold text-4xl mb-2">99.9%</h4>
+<p class="text-on-surface-variant text-sm font-medium uppercase tracking-widest">Uptime Sistêmico</p>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden md:block"></div>
+<div class="text-center md:text-left">
+<h4 class="text-primary font-bold text-4xl mb-2">15k+</h4>
+<p class="text-on-surface-variant text-sm font-medium uppercase tracking-widest">Ativos Gerenciados</p>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden md:block"></div>
+<div class="flex-1 w-full">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-bold text-on-surface">Processamento de Dados Térmicos</span>
+<span class="text-xs font-mono text-primary">82%</span>
+</div>
+<div class="h-2 w-full bg-primary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000 w-[82%] relative">
+<div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg flex justify-around items-center px-4 pb-4 pt-2 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] rounded-t-3xl">
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-100 rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[11px] font-medium mt-1">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-500 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="text-[11px] font-medium mt-1">Ordens</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-500 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="severe_cold">severe_cold</span>
+<span class="text-[11px] font-medium mt-1">Equipamentos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-500 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-medium mt-1">Perfil</span>
+</a>
+</nav>
+<!-- Floating Action Button (FAB) - Contextual -->
+<button class="fixed right-6 bottom-24 md:bottom-8 z-40 w-14 h-14 primary-gradient text-white rounded-xl shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>

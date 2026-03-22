@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#c2c6d4",
+                        "surface-container-highest": "#d5e3fd",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-error-container": "#93000a",
+                        "secondary": "#515f74",
+                        "primary-container": "#005eb8",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "on-surface-variant": "#424752",
+                        "surface": "#f8f9ff",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#0d1c2f",
+                        "outline": "#727783",
+                        "tertiary-fixed-dim": "#6bd8cb",
+                        "tertiary-container": "#006b62",
+                        "on-surface": "#0d1c2f",
+                        "tertiary": "#00514a",
+                        "surface-container": "#e6eeff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#00468c",
+                        "primary": "#00478d",
+                        "on-tertiary-fixed-variant": "#005049",
+                        "tertiary-fixed": "#89f5e7",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#a9c7ff",
+                        "surface-dim": "#ccdbf4",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-high": "#dde9ff",
+                        "secondary-container": "#d5e3fc",
+                        "on-primary-container": "#c8daff",
+                        "surface-container-low": "#eff4ff",
+                        "inverse-surface": "#233144",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-tint": "#005db6",
+                        "surface-variant": "#d5e3fd",
+                        "on-tertiary-fixed": "#00201d",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "on-tertiary-container": "#7fecde",
+                        "on-secondary-container": "#57657a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "background": "#f8f9ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #00478d 0%, #005eb8 100%);
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm shadow-blue-900/5">
+<div class="flex items-center px-4 py-3 w-full justify-between">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-150 text-blue-700 dark:text-blue-400">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-inter text-lg font-bold text-slate-900 dark:text-slate-50">Inventory Item</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors rounded-full text-slate-500">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+<button class="p-2 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors rounded-full text-slate-500">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full"></div>
+</header>
+<main class="max-w-4xl mx-auto px-4 py-6 space-y-6">
+<!-- Hero Section: Bento Style -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Product Photo -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="aspect-square relative group">
+<img alt="HVAC Compressor Unit" class="w-full h-full object-cover" data-alt="Industrial silver HVAC compressor unit on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPaMf3YngQ2iYhAzHRsPgf9L-aR-80eqgcl0-7uCrZCjSAqg5BlggxaisaxhlQl3mtRv5ioUDreUEZRD33qqfPE6X4W50VrEiKu6TBRv6mo6n8jhoWUISCsidkUQ6xtiTSiUK6SbFfYb0sjRwk3eXG223oJPYxwCUoP1MMaqTUtIr-xzp1EEXMxxrPc2kfQ9fLHAFwF0C0T69QfeoQrAz4LM7_ITfyByD3_fUk7W99HSDBW4Xr4iSZk9QRalqxcr_XyPVEcDCz6Do"/>
+<div class="absolute bottom-4 left-4 glass-effect bg-white/60 px-3 py-1 rounded-full text-xs font-semibold text-primary">
+                        High Performance Series
+                    </div>
+</div>
+</div>
+<!-- Basic Info & Stock -->
+<div class="md:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm space-y-2">
+<div class="flex justify-between items-start">
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Scroll Compressor</span>
+<span class="bg-tertiary-container text-white text-[10px] font-bold px-2 py-0.5 rounded-full">OEM PART</span>
+</div>
+<h2 class="text-2xl font-bold text-on-surface leading-tight">Copeland ZP31K5E-PFV</h2>
+<p class="text-sm font-mono text-primary font-semibold">SKU: CP-ZP31-9982</p>
+</div>
+<div class="bg-primary-fixed p-6 rounded-xl shadow-sm relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-on-primary-fixed-variant text-sm font-medium mb-1">Current Availability</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-extrabold text-on-primary-fixed">04</span>
+<span class="text-on-primary-fixed-variant font-medium">Units in stock</span>
+</div>
+<div class="mt-4 flex items-center gap-2 text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm font-bold">Van 04 - Shelf B</span>
+</div>
+</div>
+<!-- Decorative Thermal Pulse -->
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="inventory_2">inventory_2</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Details Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Specifications -->
+<div class="md:col-span-2 bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+<h3 class="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="settings_input_component">settings_input_component</span>
+                    Technical Specifications
+                </h3>
+<div class="grid grid-cols-2 gap-y-4 gap-x-8">
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Manufacturer</p>
+<p class="text-sm font-semibold text-on-surface">Emerson Climate</p>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Voltage</p>
+<p class="text-sm font-semibold text-on-surface">208-230V / 1PH</p>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Refrigerant</p>
+<p class="text-sm font-semibold text-on-surface">R-410A</p>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Phase</p>
+<p class="text-sm font-semibold text-on-surface">Single Phase</p>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">BTU Capacity</p>
+<p class="text-sm font-semibold text-on-surface">31,100 BTU/hr</p>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Oil Type</p>
+<p class="text-sm font-semibold text-on-surface">POE Oil</p>
+</div>
+</div>
+</div>
+<!-- Documentation -->
+<div class="bg-surface-container p-6 rounded-xl space-y-4">
+<h3 class="text-lg font-bold text-on-surface">Documentation</h3>
+<a class="flex items-center p-3 bg-surface-container-lowest rounded-lg group hover:ring-2 hover:ring-primary/20 transition-all" href="#">
+<div class="w-10 h-10 rounded bg-red-50 flex items-center justify-center text-red-600 mr-3">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold text-on-surface">Service Manual</p>
+<p class="text-[10px] text-on-surface-variant">PDF • 2.4 MB</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="download">download</span>
+</a>
+<a class="flex items-center p-3 bg-surface-container-lowest rounded-lg group hover:ring-2 hover:ring-primary/20 transition-all" href="#">
+<div class="w-10 h-10 rounded bg-blue-50 flex items-center justify-center text-blue-600 mr-3">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold text-on-surface">Wiring Diagram</p>
+<p class="text-[10px] text-on-surface-variant">IMG • 1.1 MB</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</section>
+<!-- Compatibility & History Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Compatibility -->
+<div class="bg-surface-container-low p-6 rounded-xl">
+<h3 class="text-lg font-bold text-on-surface mb-4">Compatibility</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-white border border-outline-variant/30 rounded-full text-xs font-medium text-secondary">Carrier WeatherMaker</span>
+<span class="px-3 py-1.5 bg-white border border-outline-variant/30 rounded-full text-xs font-medium text-secondary">Trane XR15</span>
+<span class="px-3 py-1.5 bg-white border border-outline-variant/30 rounded-full text-xs font-medium text-secondary">Lennox Elite Series</span>
+<span class="px-3 py-1.5 bg-white border border-outline-variant/30 rounded-full text-xs font-medium text-secondary">Rheem Prestige</span>
+<span class="px-3 py-1.5 bg-white border border-outline-variant/30 rounded-full text-xs font-medium text-secondary">York Affinity</span>
+</div>
+</div>
+<!-- Usage History -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+<h3 class="text-lg font-bold text-on-surface mb-4">Recent Logs</h3>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<div class="w-1 bg-tertiary h-10 rounded-full"></div>
+<div>
+<p class="text-xs font-bold text-on-surface">Restocked - 12 Units</p>
+<p class="text-[10px] text-on-surface-variant">Oct 24, 2023 • Main Warehouse</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-1 bg-primary h-10 rounded-full"></div>
+<div>
+<p class="text-xs font-bold text-on-surface">Used - 1 Unit (Job #8821)</p>
+<p class="text-[10px] text-on-surface-variant">Oct 21, 2023 • Tech: Marcus V.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-1 bg-primary h-10 rounded-full"></div>
+<div>
+<p class="text-xs font-bold text-on-surface">Used - 1 Unit (Job #8790)</p>
+<p class="text-[10px] text-on-surface-variant">Oct 18, 2023 • Tech: Marcus V.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="flex-1 primary-gradient text-white py-4 rounded-lg font-bold shadow-md shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="shopping_cart_checkout">shopping_cart_checkout</span>
+                Request Restock
+            </button>
+<button class="flex-1 bg-white border-2 border-error/20 text-error py-4 rounded-lg font-bold active:scale-[0.98] transition-all flex items-center justify-center gap-2 hover:bg-error/5">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+                Report Damaged
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-t-2xl shadow-[0_-4px_12px_rgba(13,28,47,0.06)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1.5 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-inter text-[10px] font-medium mt-1">Jobs</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-100 rounded-xl px-4 py-1.5 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-inter text-[10px] font-medium mt-1">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1.5 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="build">build</span>
+<span class="font-inter text-[10px] font-medium mt-1">Tools</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1.5 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

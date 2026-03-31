@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  src: url('../fonts/materialIcon/Material.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  font-display: block; /* garante que a fonte apareça assim que carregar */
+}
+
+
+/* Efeito vidro */
+.glass-effect {
+    backdrop-filter: blur(12px);
+}
+
+/* Gradiente primário */
+.primary-gradient {
+    background: linear-gradient(135deg, #00478d 0%, #005eb8 100%);
+}
+
+/* Remove barra de rolagem no Webkit */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.bg-thermal-gradient {
+  background: linear-gradient(135deg, #00478d 0%, #005eb8 100%);
+}
+
+.btn-primery-enter {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+gap: 0.5rem;
+width: 100%;
+padding: 1.25rem 1.5rem;
+font-weight: 700;
+font-size: 1.125rem;
+color: white;
+border-radius: 0.5rem;
+background: linear-gradient(135deg, #00478d 0%, #005eb8 100%);
+box-shadow: all 0.3s ease;
+cursor: pointer;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #003b7a 0%, #004f99 100%); /* escurece no hover */
+}
+
+.btn-primary:active {
+    transform: scale(0.98); /* efeito de clique */
+}
+
+/* Corpo da página */
+body {
+    min-height: max(884px, 100dvh);
+}
+
+
+

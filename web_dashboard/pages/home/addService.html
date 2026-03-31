@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Novo Serviço - Arctic Flow</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#e6eeff",
+              "outline": "#727783",
+              "on-secondary-fixed": "#0d1c2e",
+              "on-error-container": "#93000a",
+              "on-background": "#0d1c2f",
+              "primary": "#00478d",
+              "on-tertiary-fixed": "#00201d",
+              "secondary": "#515f74",
+              "outline-variant": "#c2c6d4",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d5e3fd",
+              "surface": "#f8f9ff",
+              "on-primary-container": "#c8daff",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#233144",
+              "surface-container-high": "#dde9ff",
+              "primary-fixed-dim": "#a9c7ff",
+              "tertiary": "#00514a",
+              "secondary-container": "#d5e3fc",
+              "inverse-on-surface": "#ebf1ff",
+              "tertiary-container": "#006b62",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#001b3d",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#b9c7df",
+              "tertiary-fixed-dim": "#6bd8cb",
+              "on-surface": "#0d1c2f",
+              "surface-bright": "#f8f9ff",
+              "on-secondary-fixed-variant": "#3a485b",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#d5e3fc",
+              "surface-variant": "#d5e3fd",
+              "inverse-primary": "#a9c7ff",
+              "primary-fixed": "#d6e3ff",
+              "surface-container-low": "#eff4ff",
+              "primary-container": "#005eb8",
+              "on-tertiary-container": "#7fecde",
+              "on-surface-variant": "#424752",
+              "surface-dim": "#ccdbf4",
+              "on-secondary-container": "#57657a",
+              "on-tertiary-fixed-variant": "#005049",
+              "tertiary-fixed": "#89f5e7",
+              "background": "#f8f9ff",
+              "surface-tint": "#005db6",
+              "on-primary-fixed-variant": "#00468c"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.25rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+        }
+        .glass-header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-header border-b border-slate-100/50 shadow-sm flex items-center justify-between px-4 h-16">
+<div class="flex items-center gap-4">
+<button class="p-2 active:scale-95 duration-200 text-blue-700 hover:bg-slate-50 rounded-full">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-bold text-slate-900 text-xl tracking-tight">Novo Serviço</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-2xl mx-auto space-y-6">
+<!-- Customer Info Card (The "Surface Container" Logic) -->
+<section class="bg-surface-container-lowest rounded-xl p-5 shadow-sm space-y-4">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<span class="text-[0.65rem] uppercase tracking-wider font-bold text-on-surface-variant/70">Cliente Selecionado</span>
+<h2 class="text-xl font-extrabold text-on-surface">Padaria Central</h2>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<p class="text-sm font-medium">Rua das Flores, 123 - Centro</p>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="store">store</span>
+</div>
+</div>
+<div class="pt-3 border-t border-surface-container-low flex gap-2">
+<button class="text-xs font-bold text-primary px-3 py-1.5 bg-primary-fixed/30 rounded-full hover:bg-primary-fixed/50 transition-colors">
+                    Trocar Cliente
+                </button>
+<button class="text-xs font-bold text-secondary px-3 py-1.5 bg-surface-container rounded-full hover:bg-surface-container-highest transition-colors">
+                    Ver Histórico
+                </button>
+</div>
+</section>
+<!-- Service Configuration Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Service Type Selection -->
+<div class="bg-surface-container-low rounded-xl p-5 space-y-3">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider">Tipo de Serviço</label>
+<div class="space-y-2">
+<label class="flex items-center p-3 rounded-lg bg-surface-container-lowest cursor-pointer group hover:ring-2 hover:ring-primary/20 transition-all">
+<input checked="" class="w-4 h-4 text-primary border-outline-variant focus:ring-primary" name="service_type" type="radio"/>
+<span class="ml-3 text-sm font-semibold text-on-surface">Manutenção Preventiva</span>
+</label>
+<label class="flex items-center p-3 rounded-lg bg-surface-container-lowest cursor-pointer group hover:ring-2 hover:ring-primary/20 transition-all">
+<input class="w-4 h-4 text-primary border-outline-variant focus:ring-primary" name="service_type" type="radio"/>
+<span class="ml-3 text-sm font-semibold text-on-surface">Reparo Corretivo</span>
+</label>
+<label class="flex items-center p-3 rounded-lg bg-surface-container-lowest cursor-pointer group hover:ring-2 hover:ring-primary/20 transition-all">
+<input class="w-4 h-4 text-primary border-outline-variant focus:ring-primary" name="service_type" type="radio"/>
+<span class="ml-3 text-sm font-semibold text-on-surface">Instalação</span>
+</label>
+</div>
+</div>
+<!-- Priority Selection -->
+<div class="bg-surface-container-low rounded-xl p-5 space-y-3">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider">Prioridade</label>
+<div class="flex flex-col gap-2">
+<button class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest hover:bg-white transition-colors border-l-4 border-tertiary">
+<span class="text-sm font-bold text-on-surface">Baixa</span>
+<span class="material-symbols-outlined text-tertiary text-lg" data-icon="low_priority">low_priority</span>
+</button>
+<button class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest hover:bg-white transition-colors border-l-4 border-secondary-fixed-dim ring-2 ring-primary/10">
+<span class="text-sm font-bold text-on-surface">Média</span>
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="drag_handle">drag_handle</span>
+</button>
+<button class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest hover:bg-white transition-colors border-l-4 border-error">
+<span class="text-sm font-bold text-on-surface">Alta</span>
+<span class="material-symbols-outlined text-error text-lg" data-icon="priority_high">priority_high</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Problem Description -->
+<section class="bg-surface-container-lowest rounded-xl p-5 shadow-sm space-y-3">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider">Descrição do Problema</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary/30 p-4 text-sm font-medium placeholder:text-on-surface-variant/40" placeholder="Descreva detalhadamente o estado do equipamento e o problema relatado..." rows="4"></textarea>
+<div class="absolute bottom-3 right-3 flex gap-2">
+<button class="p-2 bg-surface-container-highest rounded-full text-primary hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="photo_camera">photo_camera</span>
+</button>
+<button class="p-2 bg-surface-container-highest rounded-full text-primary hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="mic">mic</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Scheduling -->
+<section class="bg-surface-container-low rounded-xl p-5 space-y-4">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider">Agendamento</label>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-lowest p-3 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_today">calendar_today</span>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">Data</span>
+<input class="border-none p-0 text-sm font-bold bg-transparent focus:ring-0 text-on-surface" type="date" value="2023-10-27"/>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">Horário</span>
+<input class="border-none p-0 text-sm font-bold bg-transparent focus:ring-0 text-on-surface" type="time" value="09:00"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Action Button -->
+<div class="pt-4">
+<button class="w-full h-14 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-lg rounded-xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group">
+<span>Gerar Ordem de Serviço</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="text-center text-[10px] text-on-surface-variant mt-4 font-medium uppercase tracking-widest">A OS será enviada para o e-mail do cliente automaticamente.</p>
+</div>
+</main>
+<!-- BottomNavBar (Filtered Visibility: Only for top-level destinations) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-100/50 shadow-[0_-4px_12px_rgba(13,28,47,0.06)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] font-medium text-[10px] mt-1">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-2xl px-4 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="build" style="font-variation-settings: 'FILL' 1;">build</span>
+<span class="font-['Inter'] font-medium text-[10px] mt-1">Serviços</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Inter'] font-medium text-[10px] mt-1">Clientes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] font-medium text-[10px] mt-1">Perfil</span>
+</a>
+</nav>
+<!-- Decorative Atmosphere Background Elements -->
+<div class="fixed top-0 right-0 -z-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="fixed bottom-20 left-0 -z-10 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl"></div>
+</body></html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="styleshet" href="/css/style.css"/>
+<link href="styleshet" href="/css/output.css"/>
+<script src="https://cdn.tailwindcss.com">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#00478d",
+        secondary: "#515f74",
+        surface: "#f8f9ff"
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"]
+      }
+    }
+  }
+}
+</script>
+  </head>
+<body class="bg-background font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400">location_on</span>
+<h1 class="Manrope headline-md font-bold tracking-tight text-xl font-extrabold tracking-tighter text-blue-800 dark:text-blue-300">Precision Atmos</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto">
+  <!-- Search & Hero -->
+<section class="mb-12">
+<div class="mb-8">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-on-background">
+                    Engineered <span class="text-primary">Comfort</span>
+</h2>
+<p class="text-on-surface-variant max-w-lg">Advanced HVAC and Electrical solutions for your high-performance environment.</p>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary transition-all text-on-surface" placeholder="Search for cooling or electrical services..." type="text"/>
+</div>
+</section>
